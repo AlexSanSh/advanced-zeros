@@ -16,10 +16,10 @@ const getFactors = (number) => {
 }
 const getMainFactors = (arr) => {
   let count = 0;
-  const factorsCopy = factors.slice();
-  factorsCopy.sort((a,b)=>a-b);
-  const maxItem = factorsCopy[factorsCopy.length-1];
-  factorsCopy.forEach(item=>{if (item===maxItem) count++;});
+  const maxItem = factors[factors.length-1];
+  for (let i = 0; i < factors.length; i++) {
+    if (factors[i]===maxItem) count ++;
+  }
 return [maxItem, count];
 }
 getFactors(base);
