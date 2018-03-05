@@ -19,6 +19,7 @@ getFactors(base);
 const maxItem = factors[factors.length-1];
   for (let i = 0; i < factors.length; i++) {
     if (factors[i]===maxItem) count++;
+    else continue;
   };
 for (let i = number; i >=maxItem; i--) {
         for (let j = i; j>=maxItem; j=j/maxItem) {
@@ -27,4 +28,4 @@ for (let i = number; i >=maxItem; i--) {
         }
   }
   return countZeros/count;
-}
+};
